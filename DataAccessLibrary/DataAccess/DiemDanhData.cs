@@ -31,7 +31,7 @@ namespace DataAccessLibrary.DataAccess
         {
             SqlDataAccess sqlDataAccess = new SqlDataAccess();
 
-            string sql = "[dbo].[spGetDiemDanhByHVid]";
+            string sql = "[dbo].[spGetDiemDanhByHVid] @MaHV";
             var p = new { MaHV = id };
             var data = sqlDataAccess.LoadData<DiemDanhModel, dynamic>(sql, p);
 

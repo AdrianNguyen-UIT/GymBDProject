@@ -24,12 +24,12 @@ namespace DataAccessLibrary.DataAccess
             return data;
         }
 
-        public List<DangNhapModel> GetDangNhapByUsername(int id)
+        public List<DangNhapModel> GetDangNhapByUsername(String username)
         {
             SqlDataAccess sqlDataAccess = new SqlDataAccess();
 
-            string sql = "[dbo].[spGetDangNhapByUsername]";
-            var p = new { TaiKhoan = id };
+            string sql = "[dbo].[spGetDangNhapByUsername] @TaiKhoan";
+            var p = new { TaiKhoan = username };
             var data = sqlDataAccess.LoadData<DangNhapModel, dynamic>(sql, p);
 
             NhanVienData db = new NhanVienData();

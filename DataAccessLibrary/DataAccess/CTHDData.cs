@@ -28,7 +28,7 @@ namespace DataAccessLibrary.DataAccess
         {
             SqlDataAccess sqlDataAccess = new SqlDataAccess();
 
-            string sql = "[dbo].[spGetCTHDByHDid]";
+            string sql = "[dbo].[spGetCTHDByHDid] @MaHD";
             var p = new { MaHD = id };
             var data = sqlDataAccess.LoadData<CTHDModel, dynamic>(sql, p);
 

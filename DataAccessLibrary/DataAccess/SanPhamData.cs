@@ -28,7 +28,7 @@ namespace DataAccessLibrary.DataAccess
         {
             SqlDataAccess sqlDataAccess = new SqlDataAccess();
 
-            string sql = "[dbo].[spGetSanPhamByID]";
+            string sql = "[dbo].[spGetSanPhamByID] @MaSP";
             var p = new { MaSP = id };
             var data =  sqlDataAccess.LoadData<SanPhamModel, dynamic>(sql, p);
 

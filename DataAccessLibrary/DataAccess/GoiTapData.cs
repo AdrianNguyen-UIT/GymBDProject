@@ -22,7 +22,7 @@ namespace DataAccessLibrary.DataAccess
         {
             SqlDataAccess sqlDataAccess = new SqlDataAccess();
 
-            string sql = "[dbo].[spGetGoiTapByID]";
+            string sql = "[dbo].[spGetGoiTapByID] @MaGT";
             var p = new { MaGT = id };
             return sqlDataAccess.LoadData<GoiTapModel, dynamic>(sql, p);
         }

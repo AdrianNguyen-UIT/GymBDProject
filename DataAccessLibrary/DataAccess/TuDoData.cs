@@ -22,7 +22,7 @@ namespace DataAccessLibrary.DataAccess
         {
             SqlDataAccess sqlDataAccess = new SqlDataAccess();
 
-            string sql = "[dbo].[spGetTuDoByID]";
+            string sql = "[dbo].[spGetTuDoByID] @MaTD";
             var p = new { MaTD = id };
             return sqlDataAccess.LoadData<TuDoModel, dynamic>(sql, p);
         }

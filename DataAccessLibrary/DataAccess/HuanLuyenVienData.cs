@@ -22,7 +22,7 @@ namespace DataAccessLibrary.DataAccess
         {
             SqlDataAccess sqlDataAccess = new SqlDataAccess();
 
-            string sql = "[dbo].[spGetHLVByID]";
+            string sql = "[dbo].[spGetHLVByID] @MaHLV";
             var p = new { MaHLV = id };
             var data = sqlDataAccess.LoadData<HuanLuyenVienModel, dynamic>(sql, p);
             return data;
