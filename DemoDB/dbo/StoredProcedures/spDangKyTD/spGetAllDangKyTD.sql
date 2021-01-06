@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[spGetAllDangKyTD]
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		SELECT * FROM [dbo].[DangKyTD];
+	END
+RETURN 0

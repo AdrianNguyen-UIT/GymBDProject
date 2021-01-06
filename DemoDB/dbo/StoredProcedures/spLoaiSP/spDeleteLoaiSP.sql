@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [dbo].[spDeleteLoaiSP]
+	@MaLSP INT
+AS
+	BEGIN
+		SET NOCOUNT ON;
+
+		DELETE FROM [dbo].[SanPham]
+		WHERE [MaLSP] = @MaLSP
+
+		DELETE FROM [dbo].[LoaiSP]
+		WHERE [MaLSP] = @MaLSP
+ 	END
+RETURN 0

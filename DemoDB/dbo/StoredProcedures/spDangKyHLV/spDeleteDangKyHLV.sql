@@ -1,0 +1,9 @@
+﻿CREATE PROCEDURE [dbo].[spDeleteDangKyHLV]
+    @MaDKHLV INT
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		DELETE FROM [dbo].[DangKyHLV]
+		WHERE [MaDKHLV] = @MaDKHLV
+	END
+RETURN 0

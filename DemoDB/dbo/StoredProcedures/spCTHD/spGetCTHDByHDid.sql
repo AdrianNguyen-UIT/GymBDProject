@@ -1,0 +1,10 @@
+﻿CREATE PROCEDURE [dbo].[spGetCTHDByHDid]
+	@MaHD INT
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		SELECT * 
+		FROM [dbo].[CTHD]
+		WHERE [dbo].[CTHD].[MaHD] = @MaHD;
+	END
+RETURN 0

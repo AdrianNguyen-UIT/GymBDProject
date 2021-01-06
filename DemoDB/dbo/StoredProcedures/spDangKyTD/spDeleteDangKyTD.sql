@@ -1,0 +1,9 @@
+﻿CREATE PROCEDURE [dbo].[spDeleteDangKyTD]
+    @MaDKTD INT
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		DELETE FROM [dbo].[DangKyTD]
+		WHERE [MaDKTD] = @MaDKTD
+	END
+RETURN 0

@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[spGetAllDangNhap]
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		SELECT * FROM [dbo].[DangNhap];
+	END
+RETURN 0

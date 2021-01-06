@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[spGetAllTuDo]
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		SELECT * FROM [dbo].[TuDo];
+	END
+RETURN 0

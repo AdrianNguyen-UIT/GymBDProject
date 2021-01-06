@@ -1,0 +1,9 @@
+﻿CREATE PROCEDURE [dbo].[spDeleteThamSo]
+    @MaTS INT
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		DELETE FROM [dbo].[ThamSo]
+		WHERE [MaTS] = @MaTS
+ 	END
+RETURN 0

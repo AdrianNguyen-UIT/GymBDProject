@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[spGetLNVByID]
+	@MaLNV INT
+AS
+	SELECT *
+	FROM [dbo].[LoaiNV]
+	WHERE [MaLNV] = @MaLNV;
+RETURN 0

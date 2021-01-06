@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[SanPham]
+(
+	[MaSP] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [TenSP] NVARCHAR(50) NOT NULL, 
+    [MaLSP] INT NOT NULL, 
+    [DonGia] MONEY NOT NULL, 
+    [SoLuong] INT NOT NULL, 
+    CONSTRAINT [FK_SanPham_LoaiSP_MaLSP] FOREIGN KEY ([MaLSP]) REFERENCES [LoaiSP]([MaLSP]), 
+    CONSTRAINT [CK_SanPham_SoLuong] CHECK ([SoLuong] >= 0)
+)
+GO

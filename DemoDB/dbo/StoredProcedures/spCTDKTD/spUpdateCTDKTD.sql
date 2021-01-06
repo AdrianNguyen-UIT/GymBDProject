@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE [dbo].[spUpdateCTDKTD]
+	@MaDKTD INT, 
+    @MaTD INT
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		UPDATE [dbo].[CTDKTD]
+		SET [MaTD] = @MaTD
+		WHERE [MaDKTD] = @MaDKTD AND [MaTD] = @MaTD
+	END
+RETURN 0

@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[DangKyTD]
+(
+	[MaDKTD] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [MaHV] INT NOT NULL, 
+    [MaNV] INT NOT NULL, 
+    [NgayMuon] DATETIME NULL DEFAULT GetDate(), 
+    [GhiChu] NVARCHAR(50) NULL, 
+    CONSTRAINT [FK_DangKyTD_HoiVien_MaHV] FOREIGN KEY ([MaHV]) REFERENCES [HoiVien]([Ma]), 
+    CONSTRAINT [FK_DangKyTD_NhanVien] FOREIGN KEY ([MaNV]) REFERENCES [NhanVien]([Ma])
+)

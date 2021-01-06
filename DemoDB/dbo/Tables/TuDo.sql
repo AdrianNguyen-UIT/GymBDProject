@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[TuDo]
+(
+	[MaTD] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [TenTD] NVARCHAR(50) NOT NULL, 
+    [MoTa] NVARCHAR(MAX) NULL, 
+    [TrangThai] NCHAR(50) NULL
+)
+GO

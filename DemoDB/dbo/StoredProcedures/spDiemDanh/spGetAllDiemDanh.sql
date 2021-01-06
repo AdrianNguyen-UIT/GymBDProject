@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[spGetAllDiemDanh]
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		SELECT * FROM [dbo].[DiemDanh];
+	END
+RETURN 0

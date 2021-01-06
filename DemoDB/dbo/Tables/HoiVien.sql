@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[HoiVien]
+(
+	[Ma] INT NOT NULL PRIMARY KEY IDENTITY(1, 1), 
+    [HoTen] NVARCHAR(50) NOT NULL, 
+    [GioiTinh] NVARCHAR(20) NULL, 
+    [NgaySinh] DATETIME NULL DEFAULT GetDate(), 
+    [DiaChi] NVARCHAR(128) NULL, 
+    [SDT] VARCHAR(15) NULL, 
+    [Email] NVARCHAR(50) NULL, 
+    [GhiChu] NVARCHAR(MAX) NULL
+)

@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [dbo].[spDeleteSanPham]
+	@MaSP INT
+AS
+	BEGIN
+		SET NOCOUNT ON;
+
+		DELETE FROM [dbo].[CTHD]
+		WHERE [MaSP] = @MaSP
+
+		DELETE FROM [dbo].[SanPham]
+		WHERE [MaSP] = @MaSP
+	END
+RETURN 0

@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[spGetAllLoaiSP]
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		SELECT * FROM [dbo].[LoaiSP];
+	END
+RETURN 0

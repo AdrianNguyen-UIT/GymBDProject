@@ -1,0 +1,10 @@
+﻿CREATE PROCEDURE [dbo].[spDeleteCTHD]
+	@MaHD INT, 
+    @MaSP INT
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		DELETE FROM [dbo].CTHD
+		WHERE [MaHD] = @MaHD AND [MaSP] = @MaSP
+	END
+RETURN 0

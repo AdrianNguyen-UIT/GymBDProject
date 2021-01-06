@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[spGetLSPByID]
+	@MaLSP INT
+AS
+	SELECT *
+	FROM [dbo].[LoaiSP]
+	WHERE [MaLSP] = @MaLSP;
+RETURN 0

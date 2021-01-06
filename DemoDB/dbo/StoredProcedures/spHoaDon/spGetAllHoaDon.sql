@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[spGetAllHoaDon]
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		SELECT * FROM [dbo].[HoaDon];
+	END
+RETURN 0

@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [dbo].[spDeleteHoaDon]
+	@MaHD INT
+AS
+		BEGIN
+		SET NOCOUNT ON;
+
+		DELETE FROM [dbo].[CTHD]
+		WHERE [MaHD] = @MaHD
+
+		DELETE FROM [dbo].[HoaDon]
+		WHERE [MaHD] = @MaHD
+ 	END
+RETURN 0

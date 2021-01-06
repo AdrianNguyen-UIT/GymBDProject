@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[spGetAllGoiTap]
+AS
+	BEGIN
+		SET NOCOUNT ON;
+		SELECT * FROM [dbo].[GoiTap];
+	END
+RETURN 0

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>GymDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{4465cfa2-f6a6-4257-bbcc-845c7fada1d4}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DemoDB</RootNamespace>
+    <AssemblyName>DemoDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="PublishLocations" />
+    <Folder Include="dbo\StoredProcedures" />
+    <Folder Include="dbo\PostDeployScripts" />
+    <Folder Include="dbo\StoredProcedures\spHoiVien" />
+    <Folder Include="dbo\StoredProcedures\spNhanVien" />
+    <Folder Include="dbo\StoredProcedures\spHuanLuyenVien" />
+    <Folder Include="dbo\StoredProcedures\spGoiTap" />
+    <Folder Include="dbo\StoredProcedures\spSanPham" />
+    <Folder Include="dbo\StoredProcedures\spLoaiNV" />
+    <Folder Include="dbo\StoredProcedures\spCTDKTD" />
+    <Folder Include="dbo\StoredProcedures\spCTHD" />
+    <Folder Include="dbo\StoredProcedures\spDangKyGT" />
+    <Folder Include="dbo\StoredProcedures\spDangKyHLV" />
+    <Folder Include="dbo\StoredProcedures\spDangKyTD" />
+    <Folder Include="dbo\StoredProcedures\spDiemDanh" />
+    <Folder Include="dbo\StoredProcedures\spHoaDon" />
+    <Folder Include="dbo\StoredProcedures\spLoaiSP" />
+    <Folder Include="dbo\StoredProcedures\spDangNhap" />
+    <Folder Include="dbo\StoredProcedures\spTuDo" />
+    <Folder Include="dbo\StoredProcedures\spThamSo" />
+    <Folder Include="dbo\Functions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\HoiVien.sql" />
+    <Build Include="dbo\Tables\LoaiNV.sql" />
+    <Build Include="dbo\Tables\NhanVien.sql" />
+    <Build Include="dbo\Tables\HuanLuyenVien.sql" />
+    <Build Include="dbo\Tables\DangNhap.sql" />
+    <Build Include="dbo\Tables\GoiTap.sql" />
+    <Build Include="dbo\Tables\LoaiSP.sql" />
+    <Build Include="dbo\Tables\SanPham.sql" />
+    <Build Include="dbo\Tables\HoaDon.sql" />
+    <Build Include="dbo\Tables\CTHD.sql" />
+    <Build Include="dbo\Tables\DangKyGT.sql" />
+    <Build Include="dbo\Tables\DangKyHLV.sql" />
+    <Build Include="dbo\Tables\DiemDanh.sql" />
+    <Build Include="dbo\Tables\TuDo.sql" />
+    <Build Include="dbo\Tables\DangKyTD.sql" />
+    <Build Include="dbo\Tables\CTDKTD.sql" />
+    <Build Include="dbo\Tables\ThamSo.sql" />
+    <Build Include="dbo\StoredProcedures\spHoiVien\spGetAllHoiVien.sql" />
+    <Build Include="dbo\StoredProcedures\spHoiVien\spDeleteHoiVien.sql" />
+    <Build Include="dbo\StoredProcedures\spHoiVien\spInsertHoiVien.sql" />
+    <Build Include="dbo\StoredProcedures\spHoiVien\spUpdateHoiVien.sql" />
+    <Build Include="dbo\StoredProcedures\spNhanVien\spGetAllNhanVien.sql" />
+    <Build Include="dbo\StoredProcedures\spNhanVien\spInsertNhanVien.sql" />
+    <Build Include="dbo\StoredProcedures\spNhanVien\spDeleteNhanVien.sql" />
+    <Build Include="dbo\StoredProcedures\spNhanVien\spUpdateNhanVien.sql" />
+    <Build Include="dbo\StoredProcedures\spHuanLuyenVien\spGetAllHuanLuyenVien.sql" />
+    <Build Include="dbo\StoredProcedures\spHuanLuyenVien\spInsertHuanLuyenVien.sql" />
+    <Build Include="dbo\StoredProcedures\spHuanLuyenVien\spDeleteHuanLuyenVien.sql" />
+    <Build Include="dbo\StoredProcedures\spHuanLuyenVien\spUpdateHuanLuyenVien.sql" />
+    <Build Include="dbo\StoredProcedures\spGoiTap\spGetAllGoiTap.sql" />
+    <Build Include="dbo\StoredProcedures\spGoiTap\spInsertGoiTap.sql" />
+    <Build Include="dbo\StoredProcedures\spGoiTap\spUpdateGoiTap.sql" />
+    <Build Include="dbo\StoredProcedures\spGoiTap\spDeleteGoiTap.sql" />
+    <Build Include="dbo\StoredProcedures\spSanPham\spGetAllSanPham.sql" />
+    <Build Include="dbo\StoredProcedures\spSanPham\spInsertSanPham.sql" />
+    <Build Include="dbo\StoredProcedures\spSanPham\spDeleteSanPham.sql" />
+    <Build Include="dbo\StoredProcedures\spSanPham\spUpdateSanPham.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiNV\spGetAllLoaiNhanVien.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiNV\spInsertLoaiNhanVien.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiNV\spDeleteLoaiNhanVien.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiNV\spUpdateLoaiNhanVien.sql" />
+    <Build Include="dbo\StoredProcedures\spCTDKTD\spGetAllCTDKTD.sql" />
+    <Build Include="dbo\StoredProcedures\spCTDKTD\spInsertCTDKTD.sql" />
+    <Build Include="dbo\StoredProcedures\spCTDKTD\spUpdateCTDKTD.sql" />
+    <Build Include="dbo\StoredProcedures\spCTDKTD\spDeleteCTDKTD.sql" />
+    <Build Include="dbo\StoredProcedures\spCTHD\spGetAllCTHD.sql" />
+    <Build Include="dbo\StoredProcedures\spCTHD\spInsertCTHD.sql" />
+    <Build Include="dbo\StoredProcedures\spCTHD\spDeleteCTHD.sql" />
+    <Build Include="dbo\StoredProcedures\spCTHD\spUpdateCTHD.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyGT\spGetAllDangKyGT.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyGT\spInsertDangKyGT.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyGT\spUpdateDangKyGT.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyGT\spDeleteDangKyGT.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyHLV\spDeleteDangKyHLV.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyHLV\spGetAllDangKyHLV.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyHLV\spInsertDangKyHLV.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyHLV\spUpdateDangKyHLV.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyTD\spDeleteDangKyTD.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyTD\spGetAllDangKyTD.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyTD\spInsertDangKyTD.sql" />
+    <Build Include="dbo\StoredProcedures\spDangKyTD\spUpdateDangKyTD.sql" />
+    <Build Include="dbo\StoredProcedures\spDiemDanh\spDeleteDiemDanh.sql" />
+    <Build Include="dbo\StoredProcedures\spDiemDanh\spGetAllDiemDanh.sql" />
+    <Build Include="dbo\StoredProcedures\spDiemDanh\spInsertDiemDanh.sql" />
+    <Build Include="dbo\StoredProcedures\spDiemDanh\spUpdateDiemDanh.sql" />
+    <Build Include="dbo\StoredProcedures\spHoaDon\spDeleteHoaDon.sql" />
+    <Build Include="dbo\StoredProcedures\spHoaDon\spGetAllHoaDon.sql" />
+    <Build Include="dbo\StoredProcedures\spHoaDon\spInsertHoaDon.sql" />
+    <Build Include="dbo\StoredProcedures\spHoaDon\spUpdateHoaDon.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiSP\spDeleteLoaiSP.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiSP\spGetAllLoaiSP.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiSP\spInsertLoaiSP.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiSP\spUpdateLoaiSP.sql" />
+    <Build Include="dbo\StoredProcedures\spDangNhap\spDeleteDangNhap.sql" />
+    <Build Include="dbo\StoredProcedures\spDangNhap\spGetAllDangNhap.sql" />
+    <Build Include="dbo\StoredProcedures\spDangNhap\spInsertDangNhap.sql" />
+    <Build Include="dbo\StoredProcedures\spDangNhap\spUpdateDangNhap.sql" />
+    <Build Include="dbo\StoredProcedures\spTuDo\spDeleteTuDo.sql" />
+    <Build Include="dbo\StoredProcedures\spTuDo\spGetAllTuDo.sql" />
+    <Build Include="dbo\StoredProcedures\spTuDo\spInsertTuDo.sql" />
+    <Build Include="dbo\StoredProcedures\spTuDo\spUpdateTuDo.sql" />
+    <Build Include="dbo\StoredProcedures\spThamSo\spDeleteThamSo.sql" />
+    <Build Include="dbo\StoredProcedures\spThamSo\spGetAllThamSo.sql" />
+    <Build Include="dbo\StoredProcedures\spThamSo\spInsertThamSo.sql" />
+    <Build Include="dbo\StoredProcedures\spThamSo\spUpdateThamSo.sql" />
+    <Build Include="dbo\StoredProcedures\spDangNhap\spGetDangNhapByUsername.sql" />
+    <Build Include="dbo\StoredProcedures\spNhanVien\spGetNhanVienByID.sql" />
+    <Build Include="dbo\StoredProcedures\spHoiVien\spGetHoiVienByID.sql" />
+    <Build Include="dbo\StoredProcedures\spHuanLuyenVien\spGetHLVByID.sql" />
+    <Build Include="dbo\StoredProcedures\spGoiTap\spGetGoiTapByID.sql" />
+    <Build Include="dbo\StoredProcedures\spSanPham\spGetSanPhamByID.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiNV\spGetLNVByID.sql" />
+    <Build Include="dbo\StoredProcedures\spLoaiSP\spGetLSPByID.sql" />
+    <Build Include="dbo\StoredProcedures\spTuDo\spGetTuDoByID.sql" />
+    <Build Include="dbo\Functions\fnGetSoLuongSP.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="GymDB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocations\GymDB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="dbo\PostDeployScripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+</Project>

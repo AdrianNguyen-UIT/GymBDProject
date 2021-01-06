@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[GoiTap]
+(
+	[MaGT] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [TenGT] NVARCHAR(50) NOT NULL, 
+    [ThoiHan] INT NOT NULL, 
+    [DonGia] MONEY NOT NULL, 
+    [MoTa] NVARCHAR(MAX) NULL, 
+    [TrangThai] NVARCHAR(50) NULL
+)
